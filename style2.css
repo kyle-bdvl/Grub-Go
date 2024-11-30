@@ -64,6 +64,10 @@ input{
   background-color: rgb(41, 180, 152);
 }
 
+.signIn:hover{
+  cursor: pointer;
+}
+
 .right{
   background: url('Pictures/loginBackground.jpg');
   background-repeat:no-repeat;
