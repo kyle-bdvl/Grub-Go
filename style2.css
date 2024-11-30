@@ -1,0 +1,36 @@
+body{
+  display: flex;
+  flex-direction: row;
+  font-family: 'Roboto';
+  padding:0px;
+  margin:0px;
+}
+
+.left{
+  width:60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  font-weight: 800;
+}
+
+.inputs{
+  display:flex;
+  flex-direction: column;
+}
+
+#email{
+  margin-bottom: 1rem;
+}
+
+.right{
+  background: url('Pictures/loginBackground.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center;
+  width:40%;
+  height:100vh;
+}
