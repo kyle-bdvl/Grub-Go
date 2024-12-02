@@ -5,6 +5,13 @@ body {
   background-color: #f4f4f4;
 }
 
+#arrow{
+  width:2.5rem;
+  position:absolute;
+  margin-top: 10px;
+  margin-left:10px;
+}
+
 .header {
   text-align: center;
   background-color: #ffc94b;
