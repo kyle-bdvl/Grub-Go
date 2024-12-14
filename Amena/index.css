@@ -449,3 +449,12 @@
 .input-box select:valid~label {
     top: -10px;
 }
+
+.mobile {
+    border: 1px, black ,solid;
+    width: 500px;
+    background-color: gray;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+ }
