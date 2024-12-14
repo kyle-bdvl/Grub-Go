@@ -13,7 +13,9 @@ body {
  border: 1px, black ,solid;
   width:500px;
   background-color: white;
+
   height:100vh;
+
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -27,7 +29,9 @@ body {
 }
 
 .header img {
+
   width: 30px;
+
   margin-right: 10px;
 }
 
