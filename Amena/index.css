@@ -42,10 +42,9 @@
     display: flex;
 }
 
-
 .welcome-page {
     flex-direction: column;
-    background: url('go.jpg') no-repeat center center/cover;
+    background-image: url('../Pictures/go.jpg')  ;
     color: #fff;
     font-weight: bold;
     padding: 20px;
