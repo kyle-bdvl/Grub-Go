@@ -1,54 +1,56 @@
-const btnPopup = document.querySelector('.btnLogin-popup');
-const coverBox = document.querySelector('.cover_box');
-const loginForm = document.querySelector('.form-box.login');
-const registerForm = document.querySelector('.form-box.register');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
-const iconClose = document.querySelector('.icon-close');
-const closeButton = document.getElementById('close-popup');
-const popup = document.querySelector('.cover_box');
+function showPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active'));
 
-function showRegisterForm() {
-    registerForm.style.transform = 'translateX(0)';
-    loginForm.style.transform = 'translateX(-400px)';
-    coverBox.classList.add('active'); 
+    document.getElementById(pageId).classList.add('active');
 }
 
-function showLoginForm() {
-    loginForm.style.transform = 'translateX(0)';
-    registerForm.style.transform = 'translateX(400px)';
-    coverBox.classList.remove('active'); 
-}
-
-function showPopup() {
-    coverBox.classList.add('active-popup');
-}
-
-function closePopup() {
-    coverBox.classList.remove('active-popup');
-}
-
-registerLink.addEventListener('click', (event) => {
-    event.preventDefault(); 
-    showRegisterForm();
+const getStarted = document.getElementById('getStarted');
+getStarted.addEventListener('click', () => {
+    showPage('loginPage');
 });
 
-loginLink.addEventListener('click', (event) => {
-    event.preventDefault(); 
-    showLoginForm();
+const signUpLink = document.querySelector('.register-link');
+signUpLink.addEventListener('click', (e) => {
+    e.preventDefault(); 
+    showPage('signupOptionsPage');
 });
 
-btnPopup.addEventListener('click', showPopup);
-iconClose.addEventListener('click', closePopup);
-closeButton.addEventListener('click', () => {
-    popup.classList.remove('active-popup'); 
+const signUpButtons = document.querySelectorAll('.signup-options button');
+signUpButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const role = button.textContent.toLowerCase();
+        showPage(`${role}RegisterPage`);
+    });
 });
 
-document.getElementById('role').addEventListener('change', function () {
-    const emailInput = document.getElementById('email');
-    if (this.value === 'customer') {
-        emailInput.placeholder = "customer@example.com";
-    } else if (this.value === 'rider') {
-        emailInput.placeholder = "rider@example.com";
+const loginForm = document.querySelector('#loginPage form');
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username && password) {
+        alert('Login successful');
+
+    } else {
+        alert('Please enter both username and password');
     }
+});
+
+const registerForms = document.querySelectorAll('.page form');
+registerForms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = form.querySelector('#email').value;
+        const username = form.querySelector('#username').value;
+        const password = form.querySelector('#password').value;
+        const confirmPassword = form.querySelector('#confirmPassword').value;
+
+        if (password === confirmPassword) {
+            alert(`${username} registered successfully!`);
+        } else {
+            alert('Passwords do not match');
+        }
+    });
 });
