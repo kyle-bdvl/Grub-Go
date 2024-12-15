@@ -3,116 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grub&Go</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-     <div class="mobile"> 
-    <header class="header">
-        <div class="navigation">
-            <input type="checkbox" id="check">
-            <label for="check" class="check_btn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <label class="logo">GRUB & GO </label>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><button class="btnLogin-popup">Login</button></li>
-            </ul>
-        </div>
-    </header>
-
-    <div class="cover_box">
-        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
-
-        <!-- login -->
-
-        <div class="form-box login">
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                    <input type="email" id="email" placeholder="*****@gmail.com" required>
-                    <label>Email</label>
-                </div>
-                             
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                    <input type="password" id="password" placeholder="*******" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">Remember me</label>
-                    <a href="#">Forgot password?</a>
-                </div>
-                <button type="submit" class="btn">Login</button>
-                <div class="login-register">
-                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
-                </div>
-            </form>
+     <div class="mobile">
+        <div class="page welcome-page active" id="welcomePage">
+            <h1>Grub & Go</h1>
+            <button class="get-started-btn" id="getStarted">Get Started →</button>
         </div>
 
-<!-- registration -->
-
-        <div class="form-box register">
-            <h2>Register</h2>
-            <form action="#">
-                <div class="input-box">
-                    <label for="role">Select Role</label>
-                    <select id="role" required>
-                        <option value="" disabled selected>Select</option>
-                        <option value="customer">Customer</option>
-                        <option value="rider">Rider</option>
-                    </select>
-                </div>
-               
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                    <input type="email" id="email" placeholder="*****@gmail.com" required>
-                    <label>Email</label>
-                </div>
-                
-                
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                    <input type="password" id="password" placeholder="*******" required>
-                    <label>Password</label>
-                </div>
-
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="call-outline"></ion-icon></span> 
-                    <input type="tel" id="telephone" placeholder="ex; 011-456-7890" required>
-                    <label for="telephone">Phone Number</label>
-
-                </div>
-
-                <div class="remember-forgot">
-                    <label><input type="checkbox">Agree to terms & conditions</label>
-                    <a href="#">Forgot password?</a>
-                </div>
-                <button type="submit" class="btn">Register</button>
-                <div class="login-register">
-                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="footer">
-        <footer>
-            <div class="footer-content">
-                <p>&copy; 2024 Grab & Go. All rights reserved.</p>
-                <div class="social-icons">
-                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                </div>
+        <!-- Login Page -->
+        <div class="page" id="loginPage">
+            <div class="login-box">
+                <span class="back-arrow" onclick="showPage('welcomePage')">&larr;</span>
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="register-link">Sign Up</a></p>
+                    </div>
+                </form>
             </div>
-        </footer>
-    </div>
+        </div>
+
+
+        <!-- Options Page -->
+        <div class="page" id="signupOptionsPage">
+            <div class="signup-options">
+                <span class="back-arrow" onclick="showPage('welcomePage')">&larr;</span>
+                <h2>Sign Up</h2>
+                <button onclick="showPage('registerPage')">Customer</button>
+                <button onclick="showPage('registerPage')">Rider</button>
+                <button onclick="showPage('registerPage')">Vendor</button>
+            </div>
+        </div>
+
+        <!-- Customer sign up  -->
+        <div class="page" id="customerRegisterPage">
+            <div class="login-box">
+                <span class="back-arrow" onclick="showPage('signupOptionsPage')">&larr;</span>
+                <h2>Sign up</h2>
+                <h2>Customer</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="example@gmail.com" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter your username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    </div>
+
+                    <button type="submit" class="btn">Create an Account</button>
+                    <div class="login-register">
+                        <p>Already have an account?<a href="#" class="register-link">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Rider sign up  -->
+        <div class="page" id="riderRegisterPage">
+            <div class="login-box">
+                <span class="back-arrow" onclick="showPage('signupOptionsPage')">&larr;</span>
+                <h2>Sign up</h2>
+                <h2>Rider</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="example@gmail.com" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter your username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    </div>
+
+                    <div class="container">
+                        <h1>Upload License</h1>
+                        <div class="upload-icon">
+                            <input type="file" id="licenseUpload" accept="image/*" required>
+                            <span class="icon"><ion-icon name="cloud-upload-outline"></ion-icon></span>
+                            <label for="licenseUpload">
+                                <i class="fas fa-upload"></i> Upload License
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">Create an Account</button>
+                    <div class="login-register">
+                        <p>Already have an account?<a href="#" class="register-link">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
     </div>
 
     <script src="script.js"></script>
