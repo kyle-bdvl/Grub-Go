@@ -16,9 +16,11 @@ body {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
-  height:auto;
+  height:100vh;
   background-color:white;
-  box-shadow: 10px 10px 5px gray
+  box-shadow: 10px 10px 5px gray;
+  overflow:hidden;
+  overflow-y: scroll;
 }
 
 /* Header Section */
