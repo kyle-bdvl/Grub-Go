@@ -54,3 +54,18 @@ registerForms.forEach(form => {
         }
     });
 });
+
+const loginButton = document.getElementById('LoginToMainPage');
+
+loginButton.addEventListener('click' , (e)=>{
+    e.preventDefault(); // Prevent default form submission
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username && password) {
+        // Replace this with actual authentication logic if needed
+        window.location.href = '../Kyle/restaurant.html'; // Redirect to restaurant.html
+    } else 
+        alert('Please enter both username and password');
+    
+});
