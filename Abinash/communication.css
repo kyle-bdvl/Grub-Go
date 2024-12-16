@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f0f8e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Chat Container */
+.chat-container {
+  width: 360px;
+  background-color: #e9fce1;
+  border-radius: 12px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat Header */
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #1b5e20;
+  color: #fff;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #fff;
+}
+
+.profile-name h4 {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.profile-name .rating {
+  font-size: 14px;
+  color: #d0e8d0;
+}
+
+.profile-name .status {
+  font-size: 12px;
+  color: #d0e8d0;
+}
+
+.status.offline::before {
+  content: "•";
+  color: #ff6b6b;
+  margin-right: 4px;
+}
+
+/* Chat Messages */
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  background-color: #c8e6c9;
+}
+
+.message {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.message.received {
+  background-color: #f8f9fa;
+  align-self: flex-start;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.message.sent {
+  background-color: #43a047;
+  color: #fff;
+  align-self: flex-end;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Chat Input */
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #a5d6a7;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #9ccc65;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+  background-color: #f1f8e9;
+  color: #333;
+}
+
+.chat-input input::placeholder {
+  color: #888;
+}
+
+.send-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #388e3c;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.send-btn:hover {
+  transform: scale(1.2);
+  color: #1b5e20;
+}
