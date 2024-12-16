@@ -1,8 +1,5 @@
-function showPage(pageId) {
-  const pages = document.querySelectorAll('.page');
-  for (const page of pages) {
-      page.classList.remove('active');
-  }
-  document.getElementById(pageId).classList.add('active');
-}
+const k14 = document.getElementById('k14Btn');
 
+k14.addEventListener('click', ()=>{
+  window.location.href='mealPage.html';
+});
