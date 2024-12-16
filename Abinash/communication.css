@@ -12,12 +12,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  
 }
 
 /* Chat Container */
 .chat-container {
-  width: 360px;
+  width: 500px;
+  height: 100vh;
   background-color: #e9fce1;
   border-radius: 12px;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
