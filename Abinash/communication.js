@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Simulate driver's reply
         setTimeout(() => {
           const driverReply = document.createElement("div");
-          driverReply.textContent = "Okay, please wait 😊";
+          driverReply.textContent = "Okay, please wait 😊 punde";
           driverReply.style.padding = "10px";
           driverReply.style.margin = "5px 0";
           driverReply.style.background = "#ffffff";
