@@ -6,14 +6,14 @@
   <title>Grub&Go</title>
   <link rel="stylesheet" href="meal.css">
 
-  <script src="pageConnector.js"></script>
+  <script src="pageConnector.js" defer></script>
 
   <!-- added a new menu -->
 </head>
 <body>
   <div class="mobile">
     <!-- K14 page -->
-     <div class="pageK14">
+     <div class="content" id="targetDiv1" data-target-div="targetDiv1">
         <div class="header">
 
         <a href ="restaurant.html">
@@ -65,53 +65,202 @@
     
 
     <!-- K13 Page -->
-    <div class="header">
-        <a href ="restaurant.html">
-            <img src="..\Icons\arrow-left-bold.svg" alt="Back" id="back" >
+     <div class="content" id="targetDiv2" data-target-div="targetDiv2">
+        <div class="header">
+            <a href ="restaurant.html">
+                <img src="..\Icons\arrow-left-bold.svg" alt="Back" id="back" >
+            </a>
+          <h1>Umai K13</h1>
+      </div>
+      
+      <div class="search-bar">
+          <input type="text" placeholder="Search Bar...">
+          <button>
+              <img src="https://img.icons8.com/material-rounded/24/000000/search.png" alt="Search">
+          </button>
+      </div>
+      
+      <div class="menu">
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Kandar Ayam Goreng">
+              <h3>Nasi Kandar Ayam Goreng</h3>
+              <p>RM 7.50</p>
+              <button>Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Goreng Ayam">
+              <h3>Nasi Goreng Ayam</h3>
+              <p>RM 7.00</p>
+              <button>Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Goreng Tomyam">
+              <h3>Nasi Goreng Tomyam</h3>
+              <p>RM 7.00</p>
+              <button>Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Kandar Ikan Goreng">
+              <h3>Nasi Kandar Ikan Goreng</h3>
+              <p>RM 7.00</p>
+              <button>Add to Cart</button>
+          </div>
+      </div>
+      
+        <a href="#" class="proceed-btn">
+            Proceed to Cart
+            <span>&#128722;</span>
         </a>
-      <h1>Umai K13</h1>
-  </div>
-  
-  <div class="search-bar">
-      <input type="text" placeholder="Search Bar...">
-      <button>
-          <img src="https://img.icons8.com/material-rounded/24/000000/search.png" alt="Search">
-      </button>
-  </div>
-  
-  <div class="menu">
-      <div class="menu-item">
-          <img src="https://via.placeholder.com/100" alt="Nasi Kandar Ayam Goreng">
-          <h3>Nasi Kandar Ayam Goreng</h3>
-          <p>RM 7.50</p>
-          <button>Add to Cart</button>
-      </div>
-      <div class="menu-item">
-          <img src="https://via.placeholder.com/100" alt="Nasi Goreng Ayam">
-          <h3>Nasi Goreng Ayam</h3>
-          <p>RM 7.00</p>
-          <button>Add to Cart</button>
-      </div>
-      <div class="menu-item">
-          <img src="https://via.placeholder.com/100" alt="Nasi Goreng Tomyam">
-          <h3>Nasi Goreng Tomyam</h3>
-          <p>RM 7.00</p>
-          <button>Add to Cart</button>
-      </div>
-      <div class="menu-item">
-          <img src="https://via.placeholder.com/100" alt="Nasi Kandar Ikan Goreng">
-          <h3>Nasi Kandar Ikan Goreng</h3>
-          <p>RM 7.00</p>
-          <button>Add to Cart</button>
-      </div>
-  </div>
-  
-    <a href="#" class="proceed-btn">
-        Proceed to Cart
-        <span>&#128722;</span>
-    </a>
+     </div>
+    
 
     <!-- Kolej 10 -->
+    <div class="content" id="targetDiv3" data-target-div="targetDiv3">
+        <div class="header">
+            <a href ="restaurant.html">
+                <img src="..\Icons\arrow-left-bold.svg" alt="Back" id="back" >
+            </a>
+          <h1>Kolej 10</h1>
+      </div>
+      
+      <div class="search-bar">
+          <input type="text" placeholder="Search Bar...">
+          <button>
+              <img src="https://img.icons8.com/material-rounded/24/000000/search.png" alt="Search">
+          </button>
+      </div>
+      
+      <div class="menu">
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Kandar Ayam Goreng">
+              <h3>Nasi Kandar Ayam Goreng</h3>
+              <p>RM 7.50</p>
+              <button>Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Goreng Ayam">
+              <h3>Nasi Goreng Ayam</h3>
+              <p>RM 7.00</p>
+              <button>Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Goreng Tomyam">
+              <h3>Nasi Goreng Tomyam</h3>
+              <p>RM 7.00</p>
+              <button>Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Kandar Ikan Goreng">
+              <h3>Nasi Kandar Ikan Goreng</h3>
+              <p>RM 7.00</p>
+              <button>Add to Cart</button>
+          </div>
+      </div>
+      
+        <a href="#" class="proceed-btn">
+            Proceed to Cart
+            <span>&#128722;</span>
+        </a>
+     </div>
+
+     <!-- Kossas -->
+     <div class="content" id="targetDiv4" data-target-div="targetDiv4">
+        <div class="header">
+            <a href ="restaurant.html">
+                <img src="..\Icons\arrow-left-bold.svg" alt="Back" id="back" >
+            </a>
+          <h1>Kossas</h1>
+      </div>
+      
+      <div class="search-bar">
+          <input type="text" placeholder="Search Bar...">
+          <button>
+              <img src="https://img.icons8.com/material-rounded/24/000000/search.png" alt="Search">
+          </button>
+      </div>
+      
+      <div class="menu">
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Kandar Ayam Goreng">
+              <h3>Nasi Kandar Ayam Goreng</h3>
+              <p>RM 7.50</p>
+              <button>Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Goreng Ayam">
+              <h3>Nasi Goreng Ayam</h3>
+              <p>RM 7.00</p>
+              <button>Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Goreng Tomyam">
+              <h3>Nasi Goreng Tomyam</h3>
+              <p>RM 7.00</p>
+              <button>Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Kandar Ikan Goreng">
+              <h3>Nasi Kandar Ikan Goreng</h3>
+              <p>RM 7.00</p>
+              <button>Add to Cart</button>
+          </div>
+      </div>
+      
+        <a href="#" class="proceed-btn">
+            Proceed to Cart
+            <span>&#128722;</span>
+        </a>
+     </div>
+
+     <!-- SPE -->
+     <div class="content" id="targetDiv5" data-target-div="targetDiv5">
+        <div class="header">
+            <a href ="restaurant.html">
+                <img src="..\Icons\arrow-left-bold.svg" alt="Back" id="back" >
+            </a>
+          <h1>SPE Cafe</h1>
+      </div>
+      
+      <div class="search-bar">
+          <input type="text" placeholder="Search Bar...">
+          <button>
+              <img src="https://img.icons8.com/material-rounded/24/000000/search.png" alt="Search">
+          </button>
+      </div>
+      
+      <div class="menu">
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Kandar Ayam Goreng">
+              <h3>Nasi Kandar Ayam Goreng</h3>
+              <p>RM 7.50</p>
+              <button>Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Goreng Ayam">
+              <h3>Nasi Goreng Ayam</h3>
+              <p>RM 7.00</p>
+              <button>Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Goreng Tomyam">
+              <h3>Nasi Goreng Tomyam</h3>
+              <p>RM 7.00</p>
+              <button>Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="https://via.placeholder.com/100" alt="Nasi Kandar Ikan Goreng">
+              <h3>Nasi Kandar Ikan Goreng</h3>
+              <p>RM 7.00</p>
+              <button>Add to Cart</button>
+          </div>
+      </div>
+      
+        <a href="#" class="proceed-btn">
+            Proceed to Cart
+            <span>&#128722;</span>
+        </a>
+     </div>
+     
 </div>
 
 

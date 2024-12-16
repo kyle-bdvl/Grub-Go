@@ -10,10 +10,14 @@
   <div class="container">
     <!-- Header Section -->
     <header class="header">
+      <div class="logoutIcon">
+        <img src="..\Icons\logout.svg" id="logout" onclick="LoginPage()" alt="Logout">
+      </div>
       <div class="title">
         <h1>The Fastest in Delivery Food</h1>
         <button class="category-btn">Restaurants</button>
       </div>
+     
     </header>
 
     <!-- Restaurants Section -->
@@ -24,7 +28,7 @@
         <div class="restaurant-info">
           <h2>Umai K14</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit.</p>
-          <button class="action-btn" id="k14Btn">Press Here</button>
+          <button class="action-btn" data-target-div="targetDiv1">Press Here</button>
         </div>
       </div>
       <div class="restaurant-card" style="background-color: #bbdefb;">
@@ -33,7 +37,7 @@
         <div class="restaurant-info">
           <h2>Umai K13</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit.</p>
-          <button class="action-btn" id="k13Btn">Press Here</button>
+          <button class="action-btn" data-target-div="targetDiv2">Press Here</button>
         </div>
       </div>
       <div class="restaurant-card" style="background-color: #c8e6c9;">
@@ -43,7 +47,7 @@
         <div class="restaurant-info">
           <h2>Kolej 10</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit.</p>
-          <button class="action-btn" id="Kolej10Btn">Press Here</button>
+          <button class="action-btn" data-target-div="targetDiv3">Press Here</button>
         </div>
       </div>
       <div class="restaurant-card" style="background-color: #ffe0b2;">
@@ -53,7 +57,7 @@
         <div class="restaurant-info">
           <h2>KOSSAS Cafe</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit.</p>
-          <button class="action-btn" id="KossasBtn">Press Here</button>
+          <button class="action-btn" data-target-div="targetDiv4">Press Here</button>
         </div>
       </div>
       <div class="restaurant-card" style="background-color: #f8bbd0;">
@@ -63,13 +67,13 @@
         <div class="restaurant-info">
           <h2>SPE Cafe</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit.</p>
-          <button class="action-btn" id="SPEBtn">Press Here</button>
+          <button class="action-btn" data-target-div="targetDiv5">Press Here</button>
         </div>
       </div>
     </section>
   </div>
 
-  <script src="pageConnector.js"></script>
+  <script src="pageConnector.js" defer></script>
 
   
 </body>

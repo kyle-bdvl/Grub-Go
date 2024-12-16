@@ -3,10 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="communication.css" rel="stylesheet">
+  <title>Chat with Rider</title>
+  <link href="https://images.app.goo.gl/Wyc1sqVie9kVuMVL9" rel="stylesheet">
+  <link rel="stylesheet" href="communication.css">
 </head>
 <body>
-  
+  <div class="chat-container">
+    <!-- Chat Header -->
+    <header class="chat-header">
+      <button class="back-btn">&#8592;</button>
+      <div class="profile-info">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" 
+             alt="Profile" class="profile-pic">
+        <div class="profile-name">
+          <h4>Abinash <span class="rating">(-100.00)</span></h4>
+          <span class="status offline">Offline</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Chat Messages -->
+    <main class="chat-messages" id="chatMessages">
+      <div class="message received">
+        <p>I'm on the way</p>
+      </div>
+      <div class="message sent">
+        <p>Faster, I'm hungry 😢</p>
+      </div>
+      <div class="message sent">
+        <p>You drive so slow one !!!</p>
+      </div>
+    </main>
+
+    <!-- Chat Input -->
+    <footer class="chat-input">
+      <input type="text" id="chatInput" placeholder="Type your message">
+      <button class="send-btn" id="sendBtn">&#10148;</button>
+    </footer>
+  </div>
+
+  <script src="communication.js"></script>
 </body>
 </html>
