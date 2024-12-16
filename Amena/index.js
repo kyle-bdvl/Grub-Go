@@ -54,3 +54,9 @@ registerForms.forEach(form => {
         }
     });
 });
+
+
+let Login = document.getElementById(LoginToMainPage);
+Login.addEventListener('click',()=>{
+    window.location.href="../Kyle/restaurant.html";
+});
