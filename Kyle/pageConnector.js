@@ -1,4 +1,8 @@
-const k14Button = document.querySelector('#k14Btn');
-k14Button.addEventListener('click' ,()=>{
-  window.location.href="meal_k14.html";
-});
+function showPage(pageId) {
+  const pages = document.querySelectorAll('.page');
+  for (const page of pages) {
+      page.classList.remove('active');
+  }
+  document.getElementById(pageId).classList.add('active');
+}
+
