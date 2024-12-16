@@ -30,6 +30,19 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   text-align: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.logoutIcon{
+  margin-right:30px;
+  margin-bottom:36px;
+}
+
+#logout{
+  width:1.5rem;
 }
 
 .logo {
