@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+}
+
+.payment-page {
+  background-color: #C2FFFB;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+  width: 100%;
+  max-width: 500px;
+}
+
+.payment-header {
+  background-color: #B0F3E7;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width:500px ;
+  height: 130px;
+  margin-top: -30px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.payment-header p{
+  font-size: 2.33rem;
+  font-weight: bold;
+}
+
+.pay-by-bank, .pay-by-e-wallet {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content:flex-start;
+  background-color: white;
+  border-radius: 30px;
+  border: none;
+  padding: 20px;
+  margin-bottom: 10px;
+  width: 25rem;
+}
+
+.pay-by-bank p, .pay-by-e-wallet p {
+  font-weight: bold;
+}
+
+.bank, .e-wallet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px ;
+}
+
+.bank button, .e-wallet button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.bank button:focus, .e-wallet button:focus {
+  background-color: green;
+  outline: none;
+}
+
+.bank-logo, .e-wallet-logo {
+  margin-left: auto;
+  width: 40px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.new-method {
+  color: #3b82f6;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.confirm-payment {
+  text-align: center;
+  padding: 20px;
+}
+
+.confirm-payment button {
+  background-color: #3b82f6;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  width: 18rem;
+  padding: 12px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.confirm-payment button:hover {
+  background-color: #2563eb;
+}
+
+.confirm-payment button:active{
+  background-color: white;
+  color: #3b82f6;
+}
