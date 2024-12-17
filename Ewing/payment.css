@@ -18,10 +18,11 @@ body {
   max-width: 400px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  overflow-y: scroll;
   gap: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
   height: 100vh;
   width: 100%;
@@ -35,14 +36,18 @@ body {
   justify-content: center;
   align-items: center;
   width:500px ;
-  height: 130px;
-  margin-top: -30px;
+  padding-bottom: 35px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
 .payment-header p{
   font-size: 2.33rem;
+  font-weight: bold;
+  margin-top: 17px;
+}
+.Method{
+  font-size: 17px;
   font-weight: bold;
 }
 
@@ -55,18 +60,22 @@ body {
   border-radius: 30px;
   border: none;
   padding: 20px;
-  margin-bottom: 10px;
+  margin-top: 40px;
   width: 25rem;
 }
 
-.pay-by-bank p, .pay-by-e-wallet p {
-  font-weight: bold;
+.e-wallet p, .bank p {
+    font-size: 13px;
+    font-style: italic;
+    color: #5a5a5a;
 }
 
 .bank, .e-wallet {
+  width: 23rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
   padding: 10px ;
 }
 
@@ -77,30 +86,38 @@ body {
   border-radius: 50%;
   margin-right: 15px;
   cursor: pointer;
+  transition-duration: 0.2s;
 }
 
 .bank button:focus, .e-wallet button:focus {
-  background-color: green;
+  background-color: rgb(38, 206, 38);
   outline: none;
 }
 
 .bank-logo, .e-wallet-logo {
-  margin-left: auto;
-  width: 40px;
-  height: 20px;
-  object-fit: contain;
+  width: 2.5rem; 
+  height: 2.5rem;
+  border-radius: 30px; 
+  object-fit: cover;
+  margin-top: 5px;
 }
 
 .new-method {
-  color: #3b82f6;
-  font-size: 0.9rem;
+  color: #5a5a5a;
+  font-size: 8px;
   cursor: pointer;
   margin-top: 10px;
+  margin-left: 4px;
+}
+
+.new-method:active{
+  color: black;
+  opacity: 80%;
 }
 
 .confirm-payment {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
 }
 
 .confirm-payment button {
