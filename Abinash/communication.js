@@ -45,3 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+  //making the back button from communication 
+const backButton = document.getElementById('back-btn')
+backButton.addEventListener('click', ()=>{
+    window.location.href="../Karthik/delivery.html";
+})

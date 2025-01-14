@@ -118,3 +118,20 @@ body, html {
 .chat-btn:hover {
     background-color: #219150;
 }
+
+
+
+#back-button{ 
+    width:70px;
+    border-radius: 20px;
+    background-color: red;
+    color:white;
+    font-weight:700;
+    outline: none;
+    border-style: hidden;
+    padding:5px;
+}
+
+#back-button:hover{
+    cursor: pointer;
+}

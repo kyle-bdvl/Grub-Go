@@ -79,3 +79,16 @@ setTimeout(() => {
     moveFirstMarker(); // Start moving the first marker
     setTimeout(moveSecondMarker, 2500); // Start moving the second marker after a short delay
 }, 2000); // Start the first marker movement after 2 seconds
+
+//making the pages connect 
+const chatButton = document.getElementById("chat");
+chatButton.addEventListener('click', ()=>{
+    window.location.href="../Abinash/Communication.html";
+})
+
+//going back to the cart page 
+const redButton = document.getElementById("back-button")
+    redButton.addEventListener('click',()=>{
+        window.location.href="../Ewing/Cart.html";
+    })
+

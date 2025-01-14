@@ -11,16 +11,20 @@
 </head>
 <body>
     <div class="screen-container">
+        
         <!-- OpenStreetMap -->
         <div id="map"></div>
-
+        
         <!-- Driver Information Overlay -->
         <div class="content-container">
             <div class="driver-info">
+                <!-- Exit button back to the other menu -->
+                <button id="back-button">Go back</button>
                 <div class="driver-status">
                     <p><strong>Driver is on the way</strong> <span>2 mins</span></p>
                     <p>Kolej 14</p>
                 </div>
+                
                 <div class="driver-details">
                     <img src="https://64.media.tumblr.com/0f1d9be0930e0fd6e1421e0af63b4baa/4b38c49aa49bf456-a5/s1280x1920/54be3df4f578d67626ed9b3849f53d129667b940.jpg" alt="Driver Photo" class="driver-photo">
                     <div>
@@ -30,7 +34,7 @@
                 </div>
                 <div class="communication">
                     <button class="call-btn"><i class="fas fa-phone"></i> Call</button>
-                    <button class="chat-btn"><i class="fas fa-comment"></i> Chat</button>
+                    <button class="chat-btn" id="chat"><i class="fas fa-comment"></i> Chat</button>
                 </div>
             </div>
         </div>
