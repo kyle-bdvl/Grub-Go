@@ -10,9 +10,4 @@ continueToPayment.addEventListener('click',()=>{
   window.location.href="payment.html";
 })
 
-//after the payment page moving to the delivery page 
 
-const payButton = document.getElementById("confirm")
-  payButton.addEventListener('click', ()=>{
-  window.location.href="../Karthik/delivery.html";
-})

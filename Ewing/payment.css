@@ -136,6 +136,7 @@ body {
 
 .confirm-payment button:hover {
   background-color: #2563eb;
+  cursor: pointer;
 }
 
 .confirm-payment button:active{
