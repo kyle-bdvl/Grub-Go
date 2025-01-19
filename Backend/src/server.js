@@ -21,7 +21,7 @@ app.get("/index.html", (req, res) => {
 });
 
 app.use(express.static(path.join(__dirname, "../../Front-end")));
-// app.use(express.static(path.join(__dirname, "../../Front-end/Icons")));
+
 
 
 app.get("/Kyle/restaurant.html", (req, res) => {
