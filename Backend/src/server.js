@@ -9,10 +9,8 @@ const PORT = 3000;
 // Middleware to serve static files (for Pictures and Icons)
 app.use(express.static(path.join(__dirname, "../../Front-end")));
 
-//To connect the HTML files together
 app.use(express.static(path.join(__dirname, "../../Front-end/Amena")));
 app.use(express.static(path.join(__dirname, "../../Front-end/Kyle")));
-
 app.use(express.static(path.join(__dirname, "../../Front-end/Ewing")));
 app.use(express.static(path.join(__dirname, "../../Front-end/Karthik")));
 app.use(express.static(path.join(__dirname, "../../Front-end/Abinash")));
