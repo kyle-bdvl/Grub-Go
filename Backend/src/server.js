@@ -4,10 +4,11 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
-// Middleware to serve static files (for Pictures and Icons)
-// Middleware to serve static files (CSS, JS)
 
+// Middleware to serve static files (CSS, JS)
+// Middleware to serve static files (for Pictures and Icons)
 app.use(express.static(path.join(__dirname, "../../Front-end")));
+
 app.use(express.static(path.join(__dirname, "../../Front-end/Amena")));
 app.use(express.static(path.join(__dirname, "../../Front-end/Kyle")));
 app.use(express.static(path.join(__dirname, "../../Front-end/Ewing")));
@@ -16,7 +17,6 @@ app.use(express.static(path.join(__dirname, "../../Front-end/Abinash")));
 
 // Route to serve the HTML file
 app.get("/index.html", (req, res) => {
-  
   res.sendFile(path.resolve(__dirname, "../../Front-end/Amena"));
 });
 
