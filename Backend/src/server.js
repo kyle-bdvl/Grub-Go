@@ -12,17 +12,9 @@ dotenv.config();
 const app = express();
 const PORT = 3000;
 
-// Resolve __dirname for ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: false }));
-
-// Static file middleware
 app.use(express.static(path.join(__dirname, "../../Front-end")));
+
 app.use(express.static(path.join(__dirname, "../../Front-end/Amena")));
 app.use(express.static(path.join(__dirname, "../../Front-end/Kyle")));
 app.use(express.static(path.join(__dirname, "../../Front-end/Ewing")));
