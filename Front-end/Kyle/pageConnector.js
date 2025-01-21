@@ -44,3 +44,5 @@ document.addEventListener('DOMContentLoaded', function(){
 function LoginPage(){
   window.location.href="../Amena/index.html";
 }
+
+

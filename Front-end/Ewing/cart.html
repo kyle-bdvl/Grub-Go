@@ -23,136 +23,7 @@
     </div>
 
     <div class="cartItemList">
-      <div class = "cart-item">
-        <div class="item-image">
-          <img src="..\Pictures\chicken_rice.jpeg">
-        </div>
-        <div class = "item-details">
-          <div class="item-details-upper">
-            <p class="item-name">Nasi Ayam</p>
-            <img class="pen-logo" src="..\Icons\black-pen.png">
-            <img class="trash-logo" src="..\Icons\bin logo.jpg">
-          </div>
-          <div class="item-details-lower">
-            <button class="minus">-</button>
-            <p>1</p>
-            <button class="add">+</button>
-            <p class="price">RM7.00</p>
-          </div>
-        </div>
-      </div>
-
-      <div class = "cart-item">
-        <div class="item-image">
-          <img src="..\Pictures\chicken_rice.jpeg">
-        </div>
-        <div class = "item-details">
-          <div class="item-details-upper">
-            <p class="item-name">Nasi Ayam</p>
-            <img class="pen-logo" src="..\Icons\black-pen.png">
-            <img class="trash-logo" src="..\Icons\bin logo.jpg">
-          </div>
-          <div class="item-details-lower">
-            <button class="minus">-</button>
-            <p>1</p>
-            <button class="add">+</button>
-            <p class="price">RM7.00</p>
-          </div>
-        </div>
-      </div>
-
-      <div class = "cart-item">
-        <div class="item-image">
-          <img src="..\Pictures\chicken_rice.jpeg">
-        </div>
-        <div class = "item-details">
-          <div class="item-details-upper">
-            <p class="item-name">Nasi Ayam</p>
-            <img class="pen-logo" src="..\Icons\black-pen.png">
-            <img class="trash-logo" src="..\Icons\bin logo.jpg">
-          </div>
-          <div class="item-details-lower">
-            <button class="minus">-</button>
-            <p>1</p>
-            <button class="add">+</button>
-            <p class="price">RM7.00</p>
-          </div>
-        </div>
-      </div>
-  
-      <div class = "cart-item">
-        <div class="item-image">
-          <img src="..\Pictures\chicken_rice.jpeg">
-        </div>
-        <div class = "item-details">
-          <div class="item-details-upper">
-            <p class="item-name">Mee Rebus</p>
-            <img class="pen-logo" src="..\Icons\black-pen.png">
-            <img class="trash-logo" src="..\Icons\bin logo.jpg">
-          </div>
-          <div class="item-details-lower">
-            <button class="minus">-</button>
-            <p>1</p>
-            <button class="add">+</button>
-            <p class="price">RM7.00</p>
-          </div>
-        </div>
-      </div>
-      <div class = "cart-item">
-        <div class="item-image">
-          <img src="..\Pictures\chicken_rice.jpeg">
-        </div>
-        <div class = "item-details">
-          <div class="item-details-upper">
-            <p class="item-name">Mee Rebus</p>
-            <img class="pen-logo" src="..\Icons\black-pen.png">
-            <img class="trash-logo" src="..\Icons\bin logo.jpg">
-          </div>
-          <div class="item-details-lower">
-            <button class="minus">-</button>
-            <p>1</p>
-            <button class="add">+</button>
-            <p class="price">RM7.00</p>
-          </div>
-        </div>
-      </div>
-      <div class = "cart-item">
-        <div class="item-image">
-          <img src="..\Pictures\chicken_rice.jpeg">
-        </div>
-        <div class = "item-details">
-          <div class="item-details-upper">
-            <p class="item-name">Mee Rebus</p>
-            <img class="pen-logo" src="..\Icons\black-pen.png">
-            <img class="trash-logo" src="..\Icons\bin logo.jpg">
-          </div>
-          <div class="item-details-lower">
-            <button class="minus">-</button>
-            <p>1</p>
-            <button class="add">+</button>
-            <p class="price">RM7.00</p>
-          </div>
-        </div>
-      </div>
-    
-      <div class = "cart-item">
-        <div class="item-image">
-          <img src="..\Pictures\chicken_rice.jpeg">
-        </div>
-        <div class = "item-details">
-          <div class="item-details-upper">
-            <p class="item-name">Mee Rebus</p>
-            <img class="pen-logo" src="..\Icons\black-pen.png">
-            <img class="trash-logo" src="..\Icons\bin logo.jpg">
-          </div>
-          <div class="item-details-lower">
-            <button class="minus">-</button>
-            <p>1</p>
-            <button class="add">+</button>
-            <p class="price">RM7.00</p>
-          </div>
-        </div>
-      </div>
+      
     </div>
     
     <div class = "pickup-method"> 
@@ -187,5 +58,68 @@
 </div>
 
 <script src="pageconnection.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const cartItemList = document.querySelector(".cartItemList");
+  
+  // Retrieve cart data from localStorage
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Check if the cart has items
+  if (cart.length === 0) {
+    cartItemList.innerHTML = `<p>Your cart is empty!</p>`;
+    return;
+  }
+
+  // Render each item in the cart
+  cartItemList.innerHTML = ""; // Clear the list
+  cart.forEach((item) => {
+    const cartItem = document.createElement("div");
+    cartItem.className = "cart-item";
+    cartItem.innerHTML = `
+      <div class="item-image">
+        <img src="../Pictures/chicken_rice.jpeg" alt="${item.name}">
+      </div>
+      <div class="item-details">
+        <div class="item-details-upper">
+          <p class="item-name">${item.name}</p>
+          <img class="trash-logo" src="../Icons/bin logo.jpg" alt="Remove">
+        </div>
+        <div class="item-details-lower">
+          <button class="minus">-</button>
+          <p>${item.quantity}</p>
+          <button class="add">+</button>
+          <p class="price">${item.price}</p>
+        </div>
+      </div>
+    `;
+    cartItemList.appendChild(cartItem);
+  });
+
+  // Handle item quantity and removal
+  cartItemList.addEventListener("click", (event) => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const itemName = event.target.closest(".cart-item").querySelector(".item-name").textContent;
+
+    const itemIndex = cart.findIndex((item) => item.name === itemName);
+
+    if (event.target.classList.contains("minus")) {
+      cart[itemIndex].quantity = Math.max(cart[itemIndex].quantity - 1, 1);
+    } else if (event.target.classList.contains("add")) {
+      cart[itemIndex].quantity += 1;
+    } else if (event.target.classList.contains("trash-logo")) {
+      cart.splice(itemIndex, 1); // Remove item
+    }
+
+    // Save back to localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Reload page to refresh the cart
+    window.location.reload();
+  });
+});
+
+</script>
 </body>
 </html>
