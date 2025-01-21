@@ -35,14 +35,13 @@ const db = mysql.createPool({
 // Register route
 app.post('/api/register', async (req, res) => {
     const { email, username, password } = req.body;
-
+    
     // Validate if the necessary fields are provided
     if (!email || !username || !password) {
         return res.status(400).json({ error: 'All fields are required' });
     }
-
+    const hashedPassword = await bcrypt.hash(password, 10);
     try {
-
         // Check if the username or email already exists
         const [existingUser] = await db.query('SELECT * FROM Customer WHERE email = ? OR username = ?', [email, username]);
         if (existingUser.length > 0) {
@@ -51,7 +50,7 @@ app.post('/api/register', async (req, res) => {
 
         // Insert new user into the database
         const query = `INSERT INTO Customer (email, username, password) VALUES (?, ?, ?)`;
-        await db.query(query, [email, username, password]);
+        await db.query(query, [email, username, hashedPassword]);
 
         // Send success response
         res.status(201).json({ message: 'User registered successfully' });
@@ -60,6 +59,41 @@ app.post('/api/register', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
+
+app.post('/api/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  // Validate input
+  if (!username || !password) {
+      return res.status(400).json({ error: 'Username and password are required' });
+  }
+
+  try {
+      // Check if the user exists
+      const [users] = await db.query('SELECT * FROM Customer WHERE username = ?', [username]);
+
+      if (users.length === 0) {
+          return res.status(404).json({ error: 'User not found. Please register first.' });
+      }
+
+      const user = users[0];
+
+      // Verify password
+      const isPasswordValid = await bcrypt.compare(password, user.password);
+
+      if (!isPasswordValid) {
+          return res.status(401).json({ error: 'Invalid password. Please try again.' });
+      }
+
+      // Login successful
+      res.status(200).json({ message: 'Login successful' });
+  } catch (error) {
+      console.error('Error during login:', error.message);
+      res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
 
 // Serve HTML files (Front-end)
 app.get("/index.html", (req, res) => {
