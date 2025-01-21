@@ -263,6 +263,40 @@
      
 </div>
 
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const addToCartButtons = document.querySelectorAll(".menu-item button");
+    
+    addToCartButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+        const menuItem = button.closest(".menu-item");
+        const name = menuItem.querySelector("h3").textContent;
+        const price = menuItem.querySelector("p").textContent;
+        const image = menuItem.querySelector("img").src;
+
+        // Create cart item object
+        const cartItem = { name, price, image, quantity: 1 };
+
+        // Retrieve existing cart data from localStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Check if item already exists in cart
+        const existingItem = cart.find((item) => item.name === name);
+        if (existingItem) {
+            existingItem.quantity += 1; // Increment quantity
+        } else {
+            cart.push(cartItem); // Add new item
+        }
+
+        // Save back to localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        alert(`${name} added to the cart!`);
+        });
+    });
+    });
+
+</script>
 
 </body>
 </html>
