@@ -48,7 +48,34 @@ registerForms.forEach(form => {
         const confirmPassword = form.querySelector('#confirmPassword').value;
 
         if (password === confirmPassword) {
-            alert(`${username} registered successfully!`);
+            // Prepare data for POST request
+            const data = {
+                email: email,
+                username: username,
+                password: password
+            };
+
+            // Send POST request to backend to register the user
+            fetch('/api/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);  // Success message from backend
+                    showPage('loginPage');  // Navigate to login page
+                } else {
+                    alert('Error: ' + data.error);  // Error message from backend
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while registering.');
+            });
         } else {
             alert('Passwords do not match');
         }
